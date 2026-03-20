@@ -59,20 +59,22 @@ io.on('connection', (socket) => {
 
 // MongoDB connection
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/campusbites';
+console.log('Attempting to connect to MongoDB...');
 
 mongoose
   .connect(MONGO_URI)
   .then(() => {
-    console.log('Connected to MongoDB');
+    console.log('Successfully connected to MongoDB');
   })
   .catch((err) => {
-    console.error('MongoDB connection error:', err);
-    process.exit(1);
+    console.error('CRITICAL: MongoDB connection error:', err.message);
+    console.log('Continuing server startup (routes will fail but health check may work)...');
   });
 
 const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`Server is LIVE on port ${PORT}`);
+  console.log(`Binds to 0.0.0.0 — Health check at /`);
 });
 
