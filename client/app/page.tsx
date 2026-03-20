@@ -422,7 +422,7 @@ export default function Home() {
     setUser(JSON.parse(stored));
   }, [router]);
 
-  // ── Fetch config + menu + settings ───────────────────────────────────────
+  useEffect(() => {
     fetch(`${SETTINGS_API}`).then(r => r.json()).then(d => setIsCanteenOpen(d.isOpen)).catch(e => setError(`Settings: ${e.message}`));
     fetch(MENU_API).then(r => r.json()).then((d: MenuItem[]) => setMenu(d.filter(m => m.isAvailable)))
       .catch(e => setError(`Menu: ${e.message} (Is API URL correct?)`))
