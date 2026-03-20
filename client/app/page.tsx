@@ -423,11 +423,9 @@ export default function Home() {
   }, [router]);
 
   // ── Fetch config + menu + settings ───────────────────────────────────────
-  useEffect(() => {
-    fetch(`${PAY_API}/config`).then(r => r.json()).then(setPayConfig).catch(() => { });
-    fetch(`${SETTINGS_API}`).then(r => r.json()).then(d => setIsCanteenOpen(d.isOpen)).catch(() => { });
+    fetch(`${SETTINGS_API}`).then(r => r.json()).then(d => setIsCanteenOpen(d.isOpen)).catch(e => setError(`Settings: ${e.message}`));
     fetch(MENU_API).then(r => r.json()).then((d: MenuItem[]) => setMenu(d.filter(m => m.isAvailable)))
-      .catch(e => setError((e as Error).message))
+      .catch(e => setError(`Menu: ${e.message} (Is API URL correct?)`))
       .finally(() => setLoading(false));
   }, []);
 
