@@ -5,6 +5,7 @@ import { io, Socket } from "socket.io-client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { QRCodeSVG } from "qrcode.react";
+import { API_BASE_URL, MENU_API, ORDER_API, PAYMENT_API as PAY_API, SOCKET_URL, SETTINGS_API } from "./config";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type MenuItem = {
@@ -24,10 +25,7 @@ type OrderHistoryItem = {
 type PaymentConfig = { configured: boolean; keyId: string | null; upiId: string; canteenName: string };
 
 // ─── Constants ────────────────────────────────────────────────────────────────
-const API = "http://localhost:5000";
-const MENU_API = `${API}/api/menu`;
-const ORDER_API = `${API}/api/orders`;
-const PAY_API = `${API}/api/payment`;
+// Constants removed - using central config
 
 const CATEGORY_META: Record<string, { icon: string; color: string }> = {
   Breakfast: { icon: "🍳", color: "from-amber-500/20 to-yellow-500/10" },
@@ -427,7 +425,7 @@ export default function Home() {
   // ── Fetch config + menu + settings ───────────────────────────────────────
   useEffect(() => {
     fetch(`${PAY_API}/config`).then(r => r.json()).then(setPayConfig).catch(() => { });
-    fetch("http://localhost:5000/api/settings").then(r => r.json()).then(d => setIsCanteenOpen(d.isOpen)).catch(() => { });
+    fetch(`${SETTINGS_API}`).then(r => r.json()).then(d => setIsCanteenOpen(d.isOpen)).catch(() => { });
     fetch(MENU_API).then(r => r.json()).then((d: MenuItem[]) => setMenu(d.filter(m => m.isAvailable)))
       .catch(e => setError((e as Error).message))
       .finally(() => setLoading(false));
@@ -444,7 +442,7 @@ export default function Home() {
 
   // ── Socket.IO ────────────────────────────────────────────────────────────
   useEffect(() => {
-    const socket: Socket = io(`${API}`, { transports: ["websocket"] });
+    const socket: Socket = io(`${SOCKET_URL}`, { transports: ["websocket"] });
     socket.on("orderStatusUpdated", (order: { userId?: string | { _id?: string }; status: string }) => {
       const uid = typeof order.userId === "string" ? order.userId : order.userId?._id;
       const stored = JSON.parse(localStorage.getItem("cb_user") || "{ }");

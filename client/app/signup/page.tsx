@@ -3,8 +3,7 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-
-const AUTH_BASE = "http://localhost:5000/api/auth";
+import { AUTH_API } from "../config";
 
 export default function SignupPage() {
     const router = useRouter();
@@ -23,7 +22,7 @@ export default function SignupPage() {
 
         setLoading(true);
         try {
-            const res = await fetch(`${AUTH_BASE}/signup`, {
+            const res = await fetch(`${AUTH_API}/signup`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, roll_no: rollNo.toUpperCase(), password }),

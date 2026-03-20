@@ -4,6 +4,7 @@ import { useEffect, useState, FormEvent, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { io, Socket } from "socket.io-client";
+import { MENU_API as API_BASE, ORDER_API, SOCKET_URL, SETTINGS_API } from "../config";
 
 // ─── Live clock ────────────────────────────────────────────────────────────
 function useClock() {
@@ -38,9 +39,7 @@ type Order = {
 };
 
 
-const API_BASE = "http://localhost:5000/api/menu";
-const ORDER_API = "http://localhost:5000/api/orders";
-const SOCKET_URL = "http://localhost:5000";
+// Constants removed - using central config
 
 // ─── Push notification helper ──────────────────────────────────────────────
 function showPush(title: string, body: string, icon = "/logo.png") {
@@ -229,7 +228,7 @@ export default function AdminPage() {
     fetchMenu();
 
     // Fetch global settings
-    fetch("http://localhost:5000/api/settings")
+    fetch(`${SETTINGS_API}`)
       .then(res => res.json())
       .then(data => setIsCanteenOpen(data.isOpen))
       .catch(console.error);
@@ -262,7 +261,7 @@ export default function AdminPage() {
   // ── Toggle Canteen Status ──────────────────────────────────────────────
   const toggleCanteenStatus = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/settings", {
+      const res = await fetch(`${SETTINGS_API}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ isOpen: !isCanteenOpen }),

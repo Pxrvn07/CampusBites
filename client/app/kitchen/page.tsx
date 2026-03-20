@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { io, Socket } from "socket.io-client";
+import { SOCKET_URL, ORDER_API } from "../config";
 
 // ─── Types ─────────────────────────────────────────────────────────────────
 type MenuItem = { _id: string; name: string; price: number };
@@ -18,8 +19,7 @@ type Order = {
 };
 
 // ─── Constants ─────────────────────────────────────────────────────────────
-const SOCKET_URL = "http://localhost:5000";
-const ORDER_API = "http://localhost:5000/api/orders";
+// Constants removed - using central config
 
 // ─── Live clock hook ───────────────────────────────────────────────────────
 function useClock() {

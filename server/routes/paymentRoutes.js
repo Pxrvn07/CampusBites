@@ -16,6 +16,11 @@ const RAZORPAY_ENABLED =
     process.env.RAZORPAY_KEY_SECRET &&
     process.env.RAZORPAY_KEY_SECRET !== 'YOUR_KEY_SECRET_HERE';
 
+const razorpay = RAZORPAY_ENABLED ? new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET,
+}) : null;
+
 // ── POST /api/payment/create-order ───────────────────────────────────────────
 // Creates a Razorpay order (required before launching the checkout SDK)
 router.post('/create-order', async (req, res) => {
