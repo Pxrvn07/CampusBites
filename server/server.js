@@ -71,10 +71,15 @@ mongoose
     console.log('Continuing server startup (routes will fail but health check may work)...');
   });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000; // Render default is 10000
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is LIVE on port ${PORT}`);
-  console.log(`Binds to 0.0.0.0 — Health check at /`);
+  console.log('--- SERVER STARTUP DIAGNOSTICS ---');
+  console.log(`Time: ${new Date().toISOString()}`);
+  console.log(`Port: ${PORT}`);
+  console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+  console.log(`MONGO_URI exists: ${!!process.env.MONGO_URI}`);
+  console.log(`CLIENT_ORIGIN: ${process.env.CLIENT_ORIGIN || 'Not set (defaults to localhost:3000)'}`);
+  console.log('---------------------------------');
+  console.log(`Server is LIVE on 0.0.0.0:${PORT}`);
 });
-
