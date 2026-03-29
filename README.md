@@ -5,9 +5,6 @@
   
   <p>
     <!-- Build & License -->
-    <a href="https://github.com/Pxrvn07/CampusBites/actions"><img src="https://img.shields.io/github/actions/workflow/status/Pxrvn07/CampusBites/ci.yml?style=for-the-badge" alt="Build Status"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Pxrvn07/CampusBites?style=for-the-badge&color=green" alt="License"/></a>
-    <br/>
     <!-- Repository Stats -->
     <!-- Repository Activity & Size --
     <!-- Tech Stack -->
