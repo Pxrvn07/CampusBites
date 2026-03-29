@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Pxrvn07/CampusBites/main/client/public/favicon.ico" alt="CampusBites Logo" width="100"/>
+  
   <h1>CampusBites 🍔</h1>
   <p><strong>A responsive smart canteen ordering system designed for college campuses.</strong></p>
   
