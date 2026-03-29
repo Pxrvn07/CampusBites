@@ -15,13 +15,7 @@
     <a href="https://github.com/Pxrvn07/CampusBites/pulls"><img src="https://img.shields.io/github/issues-pr/Pxrvn07/CampusBites?style=for-the-badge&color=orange" alt="Pull Requests"/></a>
     <a href="https://github.com/Pxrvn07/CampusBites/graphs/contributors"><img src="https://img.shields.io/github/contributors/Pxrvn07/CampusBites?style=for-the-badge&color=blueviolet" alt="Contributors"/></a>
     <br/>
-    <!-- Repository Activity & Size -->
-    <a href="https://github.com/Pxrvn07/CampusBites/commits/main"><img src="https://img.shields.io/github/last-commit/Pxrvn07/CampusBites?style=for-the-badge" alt="Last Commit"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites/commits/main"><img src="https://img.shields.io/github/commit-activity/m/Pxrvn07/CampusBites?style=for-the-badge" alt="Commit Activity"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites"><img src="https://img.shields.io/github/repo-size/Pxrvn07/CampusBites?style=for-the-badge" alt="Repo Size"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites"><img src="https://img.shields.io/github/languages/count/Pxrvn07/CampusBites?style=for-the-badge" alt="Languages"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites"><img src="https://img.shields.io/github/languages/top/Pxrvn07/CampusBites?style=for-the-badge" alt="Top Language"/></a>
-    <br/>
+    <!-- Repository Activity & Size --
     <!-- Tech Stack -->
     <img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
