@@ -4,11 +4,36 @@
   <p><strong>A responsive smart canteen ordering system designed for college campuses.</strong></p>
   
   <p>
-    <a href="https://github.com/Pxrvn07/CampusBites/actions"><img src="https://img.shields.io/github/actions/workflow/status/Pxrvn07/CampusBites/ci.yml?style=flat-square" alt="Build Status"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites/stargazers"><img src="https://img.shields.io/github/stars/Pxrvn07/CampusBites?style=flat-square&color=yellow" alt="Stars"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites/network/members"><img src="https://img.shields.io/github/forks/Pxrvn07/CampusBites?style=flat-square&color=blue" alt="Forks"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites/issues"><img src="https://img.shields.io/github/issues/Pxrvn07/CampusBites?style=flat-square&color=red" alt="Issues"/></a>
-    <a href="https://github.com/Pxrvn07/CampusBites/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Pxrvn07/CampusBites?style=flat-square&color=green" alt="License"/></a>
+    <!-- Build & License -->
+    <a href="https://github.com/Pxrvn07/CampusBites/actions"><img src="https://img.shields.io/github/actions/workflow/status/Pxrvn07/CampusBites/ci.yml?style=for-the-badge" alt="Build Status"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Pxrvn07/CampusBites?style=for-the-badge&color=green" alt="License"/></a>
+    <br/>
+    <!-- Repository Stats -->
+    <a href="https://github.com/Pxrvn07/CampusBites/stargazers"><img src="https://img.shields.io/github/stars/Pxrvn07/CampusBites?style=for-the-badge&color=yellow" alt="Stars"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites/network/members"><img src="https://img.shields.io/github/forks/Pxrvn07/CampusBites?style=for-the-badge&color=blue" alt="Forks"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites/issues"><img src="https://img.shields.io/github/issues/Pxrvn07/CampusBites?style=for-the-badge&color=red" alt="Issues"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites/pulls"><img src="https://img.shields.io/github/issues-pr/Pxrvn07/CampusBites?style=for-the-badge&color=orange" alt="Pull Requests"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites/graphs/contributors"><img src="https://img.shields.io/github/contributors/Pxrvn07/CampusBites?style=for-the-badge&color=blueviolet" alt="Contributors"/></a>
+    <br/>
+    <!-- Repository Activity & Size -->
+    <a href="https://github.com/Pxrvn07/CampusBites/commits/main"><img src="https://img.shields.io/github/last-commit/Pxrvn07/CampusBites?style=for-the-badge" alt="Last Commit"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites/commits/main"><img src="https://img.shields.io/github/commit-activity/m/Pxrvn07/CampusBites?style=for-the-badge" alt="Commit Activity"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites"><img src="https://img.shields.io/github/repo-size/Pxrvn07/CampusBites?style=for-the-badge" alt="Repo Size"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites"><img src="https://img.shields.io/github/languages/count/Pxrvn07/CampusBites?style=for-the-badge" alt="Languages"/></a>
+    <a href="https://github.com/Pxrvn07/CampusBites"><img src="https://img.shields.io/github/languages/top/Pxrvn07/CampusBites?style=for-the-badge" alt="Top Language"/></a>
+    <br/>
+    <!-- Tech Stack -->
+    <img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js"/>
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+    <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+    <br/><br/>
+    <!-- Visitors -->
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=Pxrvn07.CampusBites" alt="visitors" />
   </p>
 </div>
 
